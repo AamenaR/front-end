@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>higher order function</title>
+</head>
+<body>
+  <script>
+//     function name(){
+//       console.log('Aamena');
+//     }
+
+//     function greeting(){
+//       console.log('hello');
+//       name();
+//     }
+// greeting();
+
+    const radius = [1,2,3,4,5];
+
+    // const calcArea = function(){
+    //   const op=[];
+    //   for(var i=0; i<radius.length;i++){
+    //      op.push(Math.floor(Math.PI*radius[i]*radius[i]));
+    //   }
+    //   return op;
+    // }
+    // console.log(calcArea());
+
+    const area = function(x){
+      return  Math.trunc(Math.PI*x*x);
+    }
+
+    const diameter = function(d){
+      return 2 * d;
+    }
+    // console.log(area(3));
+    // console.log(diameter(radius[0]));
+
+    const calcFormulas = function(radius, formula){
+      const op =[];
+      for(i=0; i<radius.length; i++){
+        op.push(formula(radius[i]));
+      }
+      return op;
+    }
+
+    console.log(calcFormulas(radius,area));
+    console.log(calcFormulas(radius,diameter));
+
+  
+
+    
+
+
+  </script>
+</body>
+</html>

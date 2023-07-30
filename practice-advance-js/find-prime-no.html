@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find prime number</title>
+  </head>
+  <body>
+    <p>
+      A prime number is a positive integer that is only divisible by 1 and
+      itself. For example, 2, 3, 5, 7, 11 are the first few prime numbers.
+    </p>
+
+    <span>ans:</span> <span id="ans"></span>
+    <script>
+      
+      
+
+      // if the num is 1
+        number = Number(prompt("find if a number is prime number or not"));
+
+        ans = document.getElementById('ans');
+
+        if (number === 1) {
+        console.log("1 is neither prime number nor composite number");
+        var res ="1 is neither prime nor composite number";
+      }
+
+      // (number === 1) ? var res ="1 is neither prime nor composite number"; ? (number <= 0) ?  var res = "prime number cannot be negative"; 
+
+      // IF THE num not a positive number
+      else if (number <= 0) {
+        console.log(" prime number cannot be negative");
+        var res = "prime number cannot be negative";
+      }
+
+      // functionality of checking prime num.
+      for (var i = 2; i < number; i++) {
+        if (number % i == 0) {
+            var res = number + ' is not a prime number';
+            break;
+        }
+
+        else{
+          var res = number + ' is a prime number'
+        }
+
+        
+      }
+      ans.innerHTML = res;
+      
+    </script>
+  </body>
+</html>

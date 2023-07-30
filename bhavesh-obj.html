@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bhavesh result</title>
+  </head>
+  <body>
+    <script>
+      const Bhavesh = {
+        name: "bhavesh",
+        maths: 50,
+        english: 98,
+        phy: 21,
+        sum: function () {
+          return this.maths + this.english + this.phy + "/300";
+        },
+
+        avg: function () {
+          return (this.maths + this.english + this.phy) / 3;
+        },
+
+        percent: function () {
+          return ((this.maths + this.english + this.phy) *100) / 300;
+        },
+      };
+      document.write(Bhavesh.name + ": total" + " " + Bhavesh.sum());
+
+      document.write(
+        "<br>" + Bhavesh.name + ": avg marks" + " " + Bhavesh.avg()
+      );
+
+      document.write(
+        "<br>" + Bhavesh.name + ": percentage" + Bhavesh.percent()
+      );
+    </script>
+  </body>
+</html>

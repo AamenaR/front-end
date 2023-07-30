@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forEach loop</title>
+</head>
+<body>
+  <pre>
+  for can take arr.each(func(para1,para2,para3))
+  para1 :will take values of array/obj,
+  para2: will take indexes of array/obj,
+  para3 : will basicly work as forloop concept, will run the code as many values are there in arry.
+</pre>
+  <script>
+    const newArr = [1, "two", 3, "four"];
+
+    newArr.forEach(function(val,indx,arr){
+      // console.log(`${indx}--${val}`);
+      console.log(`${arr[indx] + 100}`);
+    });
+  </script>
+
+</body>
+</html>
