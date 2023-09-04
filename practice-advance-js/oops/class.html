@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic class n obj</title>
+</head>
+<body>
+    <script>
+         class User{
+            // constructor function
+            constructor(name,age){
+                this.name = name.toUpperCase();
+                this.age = age;
+                console.log(`This is constructor function`);
+            };
+                // prototype/method
+                details(){
+                    console.log(`User name is  ${this.name} and User age is ${this.age}.`);
+                };
+            
+
+                static staticMethod(){
+                    console.log(`static Method: we do not need to create an obj for calling Static method.`)
+                }
+         };
+        //object created from class User
+         let Aamena = new User('Aamena',21);
+         
+        //calling class obj method
+         Aamena.details();
+
+        //static method can only be call by its class name we do not need to create an obj for it to call
+        User.staticMethod();
+    </script>
+</body>
+</html>

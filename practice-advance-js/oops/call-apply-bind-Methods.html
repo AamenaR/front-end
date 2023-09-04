@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call apply bind  Methods</title>
+</head>
+<body>
+    <P>with help of these methods we can borrow method of one object into other object</P>
+   <script>
+
+    let Name = {
+        firstName:'Aamena',
+        lastName:'Rangwala'   
+    }
+
+    // Name.printName();
+
+
+    let printName = function(city,town){
+            console.log(`hello I'm ${this.firstName} ${this.lastName} from ${city},${town}!`);
+        }
+
+    let person1 = {
+        firstName:'Munira',
+        lastName:'Rangwala',  
+    };
+
+    let person2 = {
+        firstName:'Ajab',
+        lastName:'Rangwala' 
+    };
+
+    // Name.printName.call(person1);
+// call method
+    // printName.call(person2, "Ahmedabad");
+
+    // apply() method
+
+    // printName.apply(person1,['Ahmedabad','Astodia'])
+
+    // bind()method
+    let newPerson = printName.bind(person2, 'India' ,"Ahmedabad");
+
+    newPerson();
+
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>polymorphism in oops</title>
+</head>
+<body>
+    <script>
+        // polymorphism in opps
+
+        class Shape {
+            draw(){ 
+                return `i am generic shape`;
+            }
+        }
+
+        class Square extends Shape{
+            draw(){
+                return `i am square shape`;
+            }
+        }
+
+        class Circle extends Shape{
+            draw(){
+                return `i am circle shape`
+            }
+        }
+
+        let s = new Shape();
+        console.log(s.draw());
+
+        let sq = new Square();
+        console.log(sq.draw());
+
+        let cir = new Circle();
+        console.log(cir.draw());
+
+        // here draw function method is  call as polymorph: a function which can have many type of data  on the basis of what class-object  is calling it
+    </script>
+</body>
+</html>

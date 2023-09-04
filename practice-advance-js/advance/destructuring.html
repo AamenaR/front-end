@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <h2>Destructuring is a JavaScript expression that allows us to extract data from arrays, objects, and maps and set them into new, distinct variables. 
+        <br>
+        Destructuring allows us to extract multiple properties, or items, from an array​ at a time.</h2>
+    <script>
+        // array destucturing
+        let namelist = ['aamena', 'munira', 'ajju', "jumana", 'Kutubuddin'];
+
+        let [, , , Mother, Father] = namelist;
+
+        let [me, elderSis, youngerSis] = namelist;
+
+        console.log(Mother);
+        console.log(Father);
+        
+        console.log(elderSis);
+        console.log(me);
+        console.log(youngerSis);
+
+        // object destructuring
+        let  person = {
+            name:'user1',
+            age: 21
+        }
+
+        let {name, age} = person;
+
+        console.log(name)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prop interitance task</title>
+</head>
+<body>
+    <script>
+        class Mother{
+            constructor(prop){
+              this.prop=prop;  
+            }
+
+            show(){
+                `Mother property is ${this.prop}%`;
+                return this.prop;
+            }
+        }
+
+       class Son extends Mother{
+        constructor(prop,share){
+            super(prop);
+            this.share=share;
+        }
+
+        property(){
+            console.log(`Son's property is ${this.show() * this.share}%`)
+            }
+       }
+
+       class Daughter extends Mother{
+        constructor(prop,share){
+            super(prop);
+            this.share=share;
+        }
+
+        part(){
+            console.log(`Daughter's property is ${this.show() * this.share}%`);
+            }
+       }
+
+        // let mother  = new Mother(100); no need to create obj for mother as interitance class form mother class can excesses parent class prop;
+        let bro = new Son(100,0.1);
+        let sis = new Daughter(100,0.9);
+
+        // mother.show();
+        console.log(`Mother property is ${bro.show()}%`);
+        bro.property();
+        sis.part();
+    </script>
+</body>
+</html>

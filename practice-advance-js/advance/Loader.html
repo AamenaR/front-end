@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loader</title>
+</head>
+<style>
+    /* css */
+    .loader{
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        margin: auto;
+        border: 5px solid #f3f3f3; /* Light grey */
+        border-top: 5px solid #3498db; /* Blue */
+        border-radius: 50%;
+        animation: spin 1.5s linear infinite; 
+    }
+
+    .moveup{
+        position:relative;
+        animation: moveup 1s;
+    }
+
+    #myDiv{
+        text-align: center;
+        display: none;
+    }
+
+    @keyframes spin{
+        from{transform: rotate(0deg);}
+        to{transform: rotate(360deg);}
+    }
+    @keyframes moveup{
+        0%{top:-100px; opacity:0;}
+        50%{opacity: .1;}
+        100%{top:0; opacity:1;}
+    }
+</style>
+<body onload="load()">
+    <!-- html -->
+    <div class="loader"></div>
+
+    <div class="moveup" id="myDiv">
+        <h2>This is page content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem optio mollitia dolores, nisi sapiente liber Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas expedita ipsum error, repudiandae, minus nisi quidem atque excepturi distinctio commodi veniam illum ad obcaecati in sed rerum modi, cupiditate dignissimos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem optio mollitia dolores, nisi sapiente liber</p>
+    </div>
+
+    <!-- js -->
+    <script>
+        let onLoadEvent = setTimeout(showContent,3000);
+        let loader = document.querySelector('.loader');
+        let content = document.getElementById('myDiv');
+
+        function load(){
+          onLoadEvent; 
+        }
+
+        function showContent(){
+            loader.style.display="none";
+            content.style.display="block";
+        }
+    </script>
+</body>
+</html>

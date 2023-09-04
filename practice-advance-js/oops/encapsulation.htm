@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encapsulation</title>
+</head>
+<body>
+    <script>
+        // encapsulation in oops: wraping data n function into once single unit (class) is kwn as encapsulation in oops see the ex below
+        class Students  {
+        constructor(){
+            let name, marks;
+        }
+
+        getName(){
+             return this.name;
+        }
+
+        setName(name){
+            this.name = name;
+        }
+
+        getMarks(){
+            return this.marks;
+        }
+
+        setMarks(marks){
+            this.marks = marks;
+        }
+    }
+
+    let stu1 = new Students();
+    let stu2 = new Students();
+
+
+    stu1.setName('aamena');
+    stu1.setMarks(78);
+
+    stu2.setName("munira");
+    stu2.setMarks(80);
+
+    console.log(stu1.getName(),stu1.getMarks());
+    
+    console.log(stu2.getName(),stu2.getMarks());
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Customer {
+
+            constructor(n){
+                this.name = n;
+            }
+            age = 21;
+
+            buy = () => { //arrow function
+                console.log(`${this.name} has buy something from class buy method`)
+            }
+    }
+
+    // inheritance 
+     class Customer2 extends Customer{
+        hello = function () { //simple assigned function
+            console.log(`i m guestCus (this is my own method)`)
+        }
+     }
+
+    let cus1 = new Customer('aamena'); // *creating object form class 
+
+    let cus2 = new Customer2('rangwala'); // *creating object from extended class 
+
+    console.log(cus1)
+
+    console.log(cus1.buy())
+
+    // *now cus2  have all prop n method access of customer1 obj/ class 
+    console.log(cus2.hello()); // cus2 own method
+    console.log(cus2.buy()); // cus2 inheritan method form class Customer
+    </script>
+</body>
+</html>

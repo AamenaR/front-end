@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from with temp-lit</title>
+</head>
+<body>
+    <script>
+        arr = [
+            {name:"aman",age:45},
+            {name:"kinjal",age:23},
+            {name:"janki",age:24}
+        ]
+
+        for(x in arr){
+            document.write(`<table border="1px" cellspacing="2px" cellpadding="8px" style="color:red; background:pink; text-align:center; margin:auto">
+                <tr>
+                <td>
+                    ${arr[x].name}    
+                </td>
+
+                <td>
+                    ${arr[x].age}
+                </td>
+            </tr>
+            </table>`);
+        }
+    </script>
+</body>
+</html>

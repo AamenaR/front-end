@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance in opps</title>
+</head>
+<body>
+    <script>
+        class Father{
+            x  = function()
+            {
+                console.log("Mother has 100% property");
+            }
+        }
+
+        // making class instances 
+        class Mother extends Father{
+
+            y = function(){
+               console.log("son has 10% property"); 
+            }
+
+            z = function(){
+                console.log("Daughter has 90% porperty");
+            }
+        }
+
+        class son extends Mother{
+
+        }
+
+        class Daughter extends Mother{
+
+        }
+
+        // storing class object in variables
+        const m = new Mother;
+        const d = new son;
+        const w = new Daughter;
+
+        // calling methods for created object
+        m.x();
+        d.y();
+        w.z();    
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

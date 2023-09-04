@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>super key word in js</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(color) {
+                this.color = color;
+            }
+
+            printColor(){
+                console.log(`color: ${this.color}`);
+            }
+        };
+
+        class Dog extends Animal{
+            constructor(breed,color,food){
+                super(color);
+                this.breed=breed;
+                this.food=food;
+            }
+
+            printFood(){
+                console.log(`Eats: ${this.food}`);
+            }
+
+            displayInfo(){
+                console.log(`breed: ${this.breed}`)
+                this.printColor();
+                this.printFood();
+            }
+        }
+
+        let D = new Dog("hunky", 'White', "Chicken");
+
+        console.log(D.displayInfo());
+    </script>
+</body>
+</html>

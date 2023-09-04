@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opp-object</title>
+</head>
+<body>
+    <pre>
+        There are certain features or mechanisms which make a Language Object-Oriented like:
+
+        OOPs Concept in JavaScript:
+        
+        1 Object	
+        2 Classes	
+        3 Encapsulation
+        4 Abstraction	
+        5 Inheritance	
+        6 Polymorphism
+
+        Object: An Object is a unique entity that contains properties and methods.
+        
+        The object can be created in two ways in JavaScript:
+        Object Literal
+        Object Constructor
+    </pre>
+
+<script>
+// Defining object literal
+let person = {
+	first_name: 'aamena',
+	last_name: 'rangwala',
+
+	//method
+	getFunction: function () {
+		return (`The name of the person is ${person.first_name.toUpperCase()} ${person.last_name.toUpperCase()}`)
+	},
+	//object within object
+	phone_number: {
+		mobile: '12345',
+		landline: '6789'
+	}
+}
+console.log(person.getFunction());
+console.log(person.phone_number.mobile);
+
+
+// Using an  object constructor
+function User(firstName,lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    }
+
+// Creating new instances of User object
+let user1 = new User('aamena ', 'Rangwala');
+let user2 = new User('aamena ', 'vohra');
+
+console.log(user1.firstName);
+console.log(user2.lastName);
+
+ 
+
+
+</script>
+
+</body>
+</html>
